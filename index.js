@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
+process.env.NODE_ENV !== 'production' && dotenv.config()
 
 
 const userRouter = require('./routes/users/userRoutes');
@@ -10,7 +11,7 @@ const errorHandler = require('./errorHandler');
 const auth = require('./routes/users/auth');
 const pinsRouter = require('./routes/pins/pin')
 
-process.env.DEV_URL && dotenv.config();
+// process.env.DEV_URL && dotenv.config();
 
 // const bodyParser = require('body-parser')
 
